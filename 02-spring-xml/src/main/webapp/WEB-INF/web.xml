@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         version="2.5"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+           http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+    <display-name>Enterprise Spring Best Practices</display-name>
+
+    <description>
+        Enterprise Spring Best Practices Application
+        This is not a complete configuration, more in the upcoming
+        Enterprise Spring Best Practices MVC blog example
+    </description>
+
+    <!-- Creates the Spring Container shared by all Servlets and Filters -->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath*:META-INF/spring/applicationContext*.xml</param-value>
+    </context-param>
+
+    <!-- Enable escaping of form submission contents -->
+    <context-param>
+        <param-name>defaultHtmlEscape</param-name>
+        <param-value>true</param-value>
+    </context-param>
+
+    <filter>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>forceEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!--  ***** ****************************************************** ***** -->
+    <!--  ***** Handling HttpRequest and HttpResponse w Logback-Access ***** -->
+    <!--  ***** ****************************************************** ***** -->
+    <filter>
+        <filter-name>TeeFilter</filter-name>
+        <filter-class>ch.qos.logback.access.servlet.TeeFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>TeeFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!--  ***** ****************************************** ***** -->
+    <!--  *****     Handling System.out and System.err     ***** -->
+    <!--  ***** ****************************************** ***** -->
+    <listener>
+        <listener-class>uk.org.lidalia.sysoutslf4j.context.SysOutOverSLF4JServletContextListener</listener-class>
+    </listener>
+
+    <!--  ***** ******************************************  ***** -->
+    <!--  ***** Providing URL for Logback Status (Optional) ***** -->
+    <!--  ***** With OnStatusConsoleListener (above)        ***** -->
+    <!--  ***** ******************************************  ***** -->
+    <servlet>
+        <servlet-name>ViewStatusMessages</servlet-name>
+        <servlet-class>ch.qos.logback.classic.ViewStatusMessagesServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ViewStatusMessages</servlet-name>
+        <url-pattern>/logbackStatus</url-pattern>
+    </servlet-mapping>
+
+    <session-config>
+        <session-timeout>10</session-timeout>
+    </session-config>
+</web-app>

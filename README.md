@@ -8,6 +8,8 @@ Code companion site for the blog series "Enterprise Spring Best Practices"
 Modules
 -------
 - 01 Project Configuration
+  - The root _pom.xml_ file
+  - Subproject directory structure
 - 02 Spring XML Configuration
   - Bootstrap Config file
   - _SLF4J_ and _Logback_ Configuration

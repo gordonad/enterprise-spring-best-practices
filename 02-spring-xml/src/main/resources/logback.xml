@@ -9,9 +9,9 @@
     <jmxConfigurator/>
 
     <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${user.dir}/logs/manny.log</file>
+        <file>${user.dir}/logs/app.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${user.dir}/logs/manny.%d{yyyy-MM-dd}.log.zip</fileNamePattern>
+            <fileNamePattern>${user.dir}/logs/app.%d{yyyy-MM-dd}.log.zip</fileNamePattern>
         </rollingPolicy>
 
         <encoder>

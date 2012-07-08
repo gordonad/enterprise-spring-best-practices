@@ -760,6 +760,7 @@
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-access</artifactId>
                 <version>${logback.version}</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>uk.org.lidalia</groupId>
