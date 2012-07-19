@@ -9,12 +9,12 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>enterprise-spring-xml</artifactId>
+    <artifactId>enterprise-application-architecture</artifactId>
 
     <packaging>jar</packaging>
-    <name>Enterprise Spring | 02 Spring XML</name>
+    <name>Enterprise Spring | 02 Application Architecture</name>
 
-    <description>02 Spring XML</description>
+    <description>02 Application Architecture</description>
 
     <developers>
         <developer>

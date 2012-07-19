@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
+        <resetJUL>true</resetJUL>
+    </contextListener>
+
+    <!-- To enable JMX Management -->
+    <jmxConfigurator/>
+
+    <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${user.dir}/logs/app.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${user.dir}/logs/app.%d{yyyy-MM-dd}.log.zip</fileNamePattern>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>%.-1level|%-40.40logger{0}|%msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%.-1level|%-40.40logger{0}|%msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com.gordondickens.enterprisespring" level="debug" />
+
+	<root level="warn">
+		<appender-ref ref="console" />
+		<appender-ref ref="file" />
+	</root>
+</configuration>

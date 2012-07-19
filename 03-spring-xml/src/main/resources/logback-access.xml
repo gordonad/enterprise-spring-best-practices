@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <statusListener class="ch.qos.logback.core.status.OnConsoleStatusListener"/>
+
+    <filter class="ch.qos.logback.access.filter.CountingFilter">
+        <name>countingFilter</name>
+    </filter>
+
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${user.dir}/logs/app-access.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${user.dir}/logs/app-access.%d{yyyy-MM-dd}.log.zip</fileNamePattern>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>combined</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%n%n%fullRequest%n%n%fullResponse%n%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE2" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${user.dir}/logs/app-req-resp.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${user.dir}/logs/app-req-resp.%d{yyyy-MM-dd}.log.zip</fileNamePattern>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>%n%n%fullRequest%n%n%fullResponse%n%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender-ref ref="FILE"/>
+    <appender-ref ref="FILE2"/>
+    <appender-ref ref="STDOUT"/>
+</configuration>
+
+
+    <!--  ***** ****************************************** ***** -->
+    <!--  *****               ADD TO WEB.XML               ***** -->
+    <!--  ***** ****************************************** ***** -->
+
+    <!--  ***** ****************************************** ***** -->
+    <!--  *****     Handling System.out and System.err     ***** -->
+    <!--  ***** ****************************************** ***** -->
+    <!--
+    <listener>
+        <listener-class>uk.org.lidalia.sysoutslf4j.context.SysOutOverSLF4JServletContextListener</listener-class>
+    </listener>
+    -->
+
+    <!--  ***** ****************************************************** ***** -->
+    <!--  ***** Handling HttpRequest and HttpResponse w Logback-Access ***** -->
+    <!--  ***** ****************************************************** ***** -->
+    <!--
+    <filter>
+        <filter-name>TeeFilter</filter-name>
+        <filter-class>ch.qos.logback.access.servlet.TeeFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>TeeFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    -->
+
+    <!--  ***** ******************************************  ***** -->
+    <!--  ***** Providing URL for Logback Status (Optional) ***** -->
+    <!--  ***** With OnStatusConsoleListener (above)        ***** -->
+    <!--  ***** ******************************************  ***** -->
+    <!--
+    <servlet>
+        <servlet-name>ViewStatusMessages</servlet-name>
+        <servlet-class>ch.qos.logback.classic.ViewStatusMessagesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ViewStatusMessages</servlet-name>
+        <url-pattern>/logbackStatus</url-pattern>
+    </servlet-mapping>
+    -->
+
+    <!--  ***** ******************************************  ***** -->

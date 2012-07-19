@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans.xsd
+         http://www.springframework.org/schema/util
+         http://www.springframework.org/schema/util/spring-util.xsd
+         http://www.springframework.org/schema/context
+         http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- System.out.println & System.err.println handling through SLF4J -->
+    <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+        <property name="targetClass" value="uk.org.lidalia.sysoutslf4j.context.SysOutOverSLF4J"/>
+        <property name="staticMethod"
+                  value="uk.org.lidalia.sysoutslf4j.context.SysOutOverSLF4J.sendSystemOutAndErrToSLF4J"/>
+        <property name="arguments">
+            <list>
+                <!-- Set log level for System.out -->
+                <util:constant static-field="uk.org.lidalia.sysoutslf4j.context.LogLevel.DEBUG"/>
+                <!-- Set log level for System.err -->
+                <util:constant static-field="uk.org.lidalia.sysoutslf4j.context.LogLevel.ERROR"/>
+            </list>
+        </property>
+    </bean>
+
+    <!-- Enable handling of java.util.logging through SLF4J -->
+    <bean id="slf4JBridgeHandler" class="org.slf4j.bridge.SLF4JBridgeHandler"
+          init-method="removeHandlersForRootLogger"/>
+    <bean class="org.slf4j.bridge.SLF4JBridgeHandler"
+          init-method="install"
+          depends-on="slf4JBridgeHandler"/>
+
+    <!-- Enable Spring JMX -->
+    <context:mbean-server/>
+    <context:mbean-server/>
+
+</beans>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<project name="GreenPages" xmlns="http://maven.apache.org/DECORATION/1.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0
+           http://maven.apache.org/xsd/decoration-1.0.0.xsd">
+    <bannerLeft>
+        <name>GreenPages</name>
+        <src>http://www.eclipse.org/virgo/documentation/greenpages-documentation-2.5.0.RELEASE/docs/htmlsingle/images/virgo-logo-large.png</src>
+        <href>http://www.eclipse.org/virgo/samples/</href>
+    </bannerLeft>
+    <bannerRight>
+        <src>http://maven.apache.org/images/maven-small.gif</src>
+    </bannerRight>
+
+    <body>
+        <links>
+            <item name="Eclipse Virgo" href="http://www.eclipse.org/virgo"/>
+            <item name="Eclipse Equinox" href="http://eclipse.org/equinox/"/>
+
+        </links>
+        <menu ref="reports"/>
+        <menu name="Maven 2.0">
+            <item name="Greenpages DB" href="greenpages.db/site/index.html"/>
+            <item name="Greenpages JPA" href="greenpages.jpa/site/index.html"/>
+            <item name="GreenPages Services" href="greenpages.services/site/index.html"/>
+            <item name="GreenPages Web" href="greenpages.web/site/index.html"/>
+        </menu>
+
+    </body>
+</project>

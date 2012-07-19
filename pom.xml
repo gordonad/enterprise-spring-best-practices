@@ -29,7 +29,7 @@
         <activemq.version>5.6.0</activemq.version>
         <antlr.version>2.7.7</antlr.version>
         <asm.version>3.3.1</asm.version>
-        <aspectj.version>1.7.0.RC1</aspectj.version>
+        <aspectj.version>1.7.0.RELEASE</aspectj.version>
         <cglib.version>2.2.2</cglib.version>
         <commons.beanutils.version>1.8.3</commons.beanutils.version>
         <commons.cli.version>1.2</commons.cli.version>
@@ -76,32 +76,35 @@
         <jta.version>1.1</jta.version>
         <junit.version>4.10</junit.version>
         <logback.version>1.0.6</logback.version>
+        <maven.ant.plugin>1.7</maven.ant.plugin>
         <maven.aspectj.plugin>1.4</maven.aspectj.plugin>
         <maven.assembly.plugin>2.3</maven.assembly.plugin>
         <maven.checkstyle.plugin>2.7</maven.checkstyle.plugin>
         <maven.clean.plugin>2.4.1</maven.clean.plugin>
         <maven.cobertura.plugin>2.5.1</maven.cobertura.plugin>
-        <maven.compiler.plugin>2.4</maven.compiler.plugin>
+        <maven.compiler.plugin>2.5.1</maven.compiler.plugin>
         <maven.dependency.plugin>2.4</maven.dependency.plugin>
         <maven.deploy.plugin>2.7</maven.deploy.plugin>
         <maven.eclipse.plugin>2.9</maven.eclipse.plugin>
-        <maven.enforcer.plugin>1.0.1</maven.enforcer.plugin>
+        <maven.enforcer.plugin>1.1</maven.enforcer.plugin>
         <maven.exec.plugin>1.2.1</maven.exec.plugin>
         <maven.failsafe.plugin>2.12</maven.failsafe.plugin>
-        <maven.findbugs.plugin>2.5</maven.findbugs.plugin>
+        <maven.findbugs.plugin>3.1.1</maven.findbugs.plugin>
+        <maven.groovy.plugin>1.4</maven.groovy.plugin>
         <maven.help.plugin>2.1.1</maven.help.plugin>
         <maven.install.plugin>2.3.1</maven.install.plugin>
         <maven.jar.plugin>2.4</maven.jar.plugin>
         <maven.javadoc.plugin>2.8.1</maven.javadoc.plugin>
-        <maven.jetty.plugin>8.1.3.v20120416</maven.jetty.plugin>
+        <maven.jetty.plugin>8.1.4.v20120524</maven.jetty.plugin>
         <maven.jxr.plugin>2.3</maven.jxr.plugin>
-        <maven.plugin.plugin>3.0</maven.plugin.plugin>
+        <maven.plugin.plugin>3.1</maven.plugin.plugin>
         <maven.pmd.plugin>2.7.1</maven.pmd.plugin>
         <maven.project.info.reports.plugin>2.4</maven.project.info.reports.plugin>
-        <maven.release.plugin>2.2.2</maven.release.plugin>
+        <maven.release.plugin>2.3.2</maven.release.plugin>
         <maven.resources.plugin>2.5</maven.resources.plugin>
+        <maven.selenium.plugin>2.3</maven.selenium.plugin>
         <maven.site.plugin>3.1</maven.site.plugin>
-        <maven.sonar.plugin>3.0</maven.sonar.plugin>
+        <maven.sonar.plugin>3.1.1</maven.sonar.plugin>
         <maven.source.plugin>2.1.2</maven.source.plugin>
         <maven.surefire.plugin>2.12</maven.surefire.plugin>
         <maven.taglist.plugin>2.4</maven.taglist.plugin>
@@ -111,7 +114,7 @@
         <maven.version.range>[2.2.1,3.1.0)</maven.version.range>
         <maven.versions.plugin>1.3.1</maven.versions.plugin>
         <maven.war.plugin>2.2</maven.war.plugin>
-        <mockito.version>1.9.0</mockito.version>
+        <mockito.version>1.9.5-rc1</mockito.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <rome.version>1.0</rome.version>
         <servlet.version>2.5</servlet.version>
@@ -134,18 +137,13 @@
     </properties>
 
     <modules>
-        <module>02-spring-xml</module>
+        <module>02-application-architecture</module>
+        <module>03-spring-xml</module>
         <!--<module>project2</module>-->
         <!--<module>project3</module>-->
     </modules>
 
     <dependencies>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-ehcache</artifactId>
-            <version>${hibernate.version}</version>
-        </dependency>
-
         <dependency>
             <groupId>org.hsqldb</groupId>
             <artifactId>hsqldb</artifactId>
@@ -183,8 +181,8 @@
             <artifactId>logback-classic</artifactId>
         </dependency>
         <dependency>
-          <groupId>uk.org.lidalia</groupId>
-          <artifactId>sysout-over-slf4j</artifactId>
+            <groupId>uk.org.lidalia</groupId>
+            <artifactId>sysout-over-slf4j</artifactId>
         </dependency>
     </dependencies>
 
