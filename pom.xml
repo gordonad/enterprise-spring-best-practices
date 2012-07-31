@@ -141,8 +141,8 @@
     <modules>
         <module>02-application-architecture</module>
         <module>03-spring-xml</module>
-        <!--<module>project2</module>-->
-        <!--<module>project3</module>-->
+        <module>04-spring-annotations</module>
+        <module>05-spirng-javaconfig</module>
     </modules>
 
     <dependencies>
