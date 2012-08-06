@@ -142,7 +142,7 @@
         <module>02-application-architecture</module>
         <module>03-spring-xml</module>
         <module>04-spring-annotations</module>
-        <module>05-spirng-javaconfig</module>
+        <module>05-spring-javaconfig</module>
     </modules>
 
     <dependencies>
