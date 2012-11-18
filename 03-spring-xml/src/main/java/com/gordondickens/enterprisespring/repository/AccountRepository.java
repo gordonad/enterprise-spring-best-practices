@@ -1,4 +1,4 @@
-package com.gordondickens.repository;
+package com.gordondickens.enterprisespring.repository;
 
 /**
  * TODO Define ME!

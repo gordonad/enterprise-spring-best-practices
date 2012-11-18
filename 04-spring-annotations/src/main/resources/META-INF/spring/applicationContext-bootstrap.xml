@@ -3,25 +3,12 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:util="http://www.springframework.org/schema/util"
        xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:jdbc="http://www.springframework.org/schema/jdbc"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
          http://www.springframework.org/schema/beans/spring-beans.xsd
          http://www.springframework.org/schema/util
          http://www.springframework.org/schema/util/spring-util.xsd
          http://www.springframework.org/schema/context
-         http://www.springframework.org/schema/context/spring-context.xsd
-         http://www.springframework.org/schema/jdbc
-         http://www.springframework.org/schema/jdbc/spring-jdbc.xsd">
-
-
-    <bean id="accountRepository" class="com.gordondickens.enterprisespring.repository.internal.AccountRepositoryImpl">
-        <constructor-arg ref="dataSource"/>
-    </bean>
-
-    <jdbc:embedded-database id="dataSource" type="HSQL">
-        <jdbc:script location="classpath:/mySchema.sql"/>
-        <jdbc:script location="classpath:/mySampleData.sql"/>
-    </jdbc:embedded-database>
+         http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- System.out.println & System.err.println handling through SLF4J -->
     <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">

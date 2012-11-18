@@ -14,8 +14,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  */
 @ContextConfiguration
 @RunWith(SpringJUnit4ClassRunner.class)
-public class JulAndSysoutTests {
-    private static final Logger logger = LoggerFactory.getLogger(JulAndSysoutTests.class);
+public class JulAndSysoutTest {
+    private static final Logger logger = LoggerFactory.getLogger(JulAndSysoutTest.class);
 
     java.util.logging.Logger julLogger = java.util.logging.Logger
         .getLogger("com.gordondickens.enterprisespring");

@@ -1,4 +1,4 @@
-package com.gordondickens.service.annotation;
+package com.gordondickens.repository.annotation;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

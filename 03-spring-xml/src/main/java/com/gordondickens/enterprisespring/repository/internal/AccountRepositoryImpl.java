@@ -1,6 +1,6 @@
-package com.gordondickens.repository.internal;
+package com.gordondickens.enterprisespring.repository.internal;
 
-import com.gordondickens.repository.AccountRepository;
+import com.gordondickens.enterprisespring.repository.AccountRepository;
 
 import javax.sql.DataSource;
 
