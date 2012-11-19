@@ -5,7 +5,7 @@
          xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0
            http://maven.apache.org/xsd/decoration-1.0.0.xsd">
     <bannerLeft>
-        <name>GreenPages</name>
+        <name>Enterprise Spring Best Practices</name>
         <src>images/technophile-blog.png</src>
         <href>http://technophile.gordondickens.com</href>
     </bannerLeft>
