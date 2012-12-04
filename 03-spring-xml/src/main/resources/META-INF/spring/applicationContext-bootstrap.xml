@@ -14,7 +14,7 @@
          http://www.springframework.org/schema/jdbc/spring-jdbc.xsd">
 
 
-    <bean id="accountRepository" class="com.gordondickens.repository.internal.AccountRepositoryImpl">
+    <bean id="accountRepository" class="com.gordondickens.enterprisespring.repository.internal.AccountRepositoryImpl">
         <constructor-arg ref="dataSource"/>
     </bean>
 

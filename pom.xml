@@ -28,14 +28,14 @@
 
     <properties>
         <activation.version>1.1.1</activation.version>
-        <activemq.version>5.6.0</activemq.version>
+        <activemq.version>5.7.0</activemq.version>
         <antlr.version>2.7.7</antlr.version>
         <asm.version>3.3.1</asm.version>
-        <aspectj.version>1.7.0.RELEASE</aspectj.version>
+        <aspectj.version>1.7.1</aspectj.version>
         <cglib.version>2.2.2</cglib.version>
         <commons.beanutils.version>1.8.3</commons.beanutils.version>
         <commons.cli.version>1.2</commons.cli.version>
-        <commons.codec.version>1.6</commons.codec.version>
+        <commons.codec.version>1.7</commons.codec.version>
         <commons.collections.version>3.2.1</commons.collections.version>
         <commons.dbcp.version>1.4</commons.dbcp.version>
         <commons.digester3.version>3.2</commons.digester3.version>
@@ -50,7 +50,8 @@
         <commons.pool.version>1.6</commons.pool.version>
         <derby.version>10.9.1.0</derby.version>
         <dom4j.version>1.6.1</dom4j.version>
-        <ehcache.version>2.6.0</ehcache.version>
+        <doxia-module-markdown.version>1.3</doxia-module-markdown.version>
+        <ehcache.version>2.6.2</ehcache.version>
         <geronimo.jee.version>1.0.1</geronimo.jee.version>
         <geronimo.jta.version>1.1.1</geronimo.jta.version>
         <geronimo.ws.version>1.1.3</geronimo.ws.version>
@@ -59,82 +60,85 @@
         <hibernate.jmx.version>3.5.6-Final</hibernate.jmx.version>
         <hibernate.jpa.version>1.0.1.Final</hibernate.jpa.version>
         <hibernate.validator.version>4.3.0.Final</hibernate.validator.version>
-        <!--<hibernate.version>4.1.4.Final</hibernate.version>-->
+        <!--<hibernate.version>4.1.8.Final</hibernate.version>-->
         <hibernate.version>3.6.10.Final</hibernate.version>
         <hsqldb.version>2.2.8</hsqldb.version>
-        <jackson.version>1.9.9</jackson.version>
-        <jamon.version>2.4</jamon.version>
+        <jackson.version>1.9.11</jackson.version>
+        <janino.version>2.6.1</janino.version>
         <jasypt.version>1.9.0</jasypt.version>
         <javamail.version>1.4.5</javamail.version>
         <javassist.version>3.16.1-GA</javassist.version>
         <java.version>1.6</java.version>
         <javaws.version>2.1-1</javaws.version>
-        <jaxb.version>2.2.4</jaxb.version>
+        <jaxb-api.version>2.2.7</jaxb-api.version>
+        <jaxb-impl.version>2.2.7-b41</jaxb-impl.version>
         <jettison.version>1.3.2</jettison.version>
         <jms.version>1.1.1</jms.version>
         <jodatime.hibernate.version>1.3</jodatime.hibernate.version>
         <jodatime.version>2.1</jodatime.version>
         <jstl.version>1.2</jstl.version>
         <jta.version>1.1</jta.version>
-        <junit.version>4.10</junit.version>
-        <logback.version>1.0.6</logback.version>
+        <junit.version>4.11</junit.version>
+        <logback.version>1.0.7</logback.version>
         <maven.ant.plugin>1.7</maven.ant.plugin>
+        <maven-apt-plugin.version>1.0.4</maven-apt-plugin.version>
         <maven.aspectj.plugin>1.4</maven.aspectj.plugin>
         <maven.assembly.plugin>2.3</maven.assembly.plugin>
         <maven.checkstyle.plugin>2.7</maven.checkstyle.plugin>
         <maven.clean.plugin>2.5</maven.clean.plugin>
-        <maven.cobertura.plugin>2.5.1</maven.cobertura.plugin>
+        <maven.cobertura.plugin>2.5.2</maven.cobertura.plugin>
         <maven.compiler.plugin>2.5.1</maven.compiler.plugin>
-        <maven.dependency.plugin>2.4</maven.dependency.plugin>
+        <maven.dependency.plugin>2.5.1</maven.dependency.plugin>
         <maven.deploy.plugin>2.7</maven.deploy.plugin>
         <maven.eclipse.plugin>2.9</maven.eclipse.plugin>
         <maven.enforcer.plugin>1.1.1</maven.enforcer.plugin>
         <maven.exec.plugin>1.2.1</maven.exec.plugin>
-        <maven.failsafe.plugin>2.12</maven.failsafe.plugin>
-        <maven.findbugs.plugin>3.1.1</maven.findbugs.plugin>
+        <maven.failsafe.plugin>2.12.4</maven.failsafe.plugin>
+        <maven.findbugs.plugin>2.5.2</maven.findbugs.plugin>
         <maven.groovy.plugin>1.4</maven.groovy.plugin>
         <maven.help.plugin>2.1.1</maven.help.plugin>
-        <maven.install.plugin>2.3.1</maven.install.plugin>
+        <maven.install.plugin>2.4</maven.install.plugin>
         <maven.jar.plugin>2.4</maven.jar.plugin>
-        <maven.javadoc.plugin>2.8.1</maven.javadoc.plugin>
-        <maven.jetty.plugin>8.1.5.v20120716</maven.jetty.plugin>
+        <maven.javadoc.plugin>2.9</maven.javadoc.plugin>
+        <maven.jetty.plugin>8.1.8.v20121106</maven.jetty.plugin>
         <maven.jxr.plugin>2.3</maven.jxr.plugin>
-        <maven.plugin.plugin>3.1</maven.plugin.plugin>
+        <maven.plugin.plugin>3.2</maven.plugin.plugin>
         <maven.pmd.plugin>2.7.1</maven.pmd.plugin>
-        <maven.project.info.reports.plugin>2.4</maven.project.info.reports.plugin>
+        <maven.project.info.reports.plugin>2.5.1</maven.project.info.reports.plugin>
         <maven.release.plugin>2.3.2</maven.release.plugin>
-        <maven.resources.plugin>2.5</maven.resources.plugin>
+        <maven.resources.plugin>2.6</maven.resources.plugin>
         <maven.selenium.plugin>2.3</maven.selenium.plugin>
-        <maven.site.plugin>3.1</maven.site.plugin>
-        <maven.sonar.plugin>3.2-RC3</maven.sonar.plugin>
-        <maven.source.plugin>2.1.2</maven.source.plugin>
-        <maven.surefire.plugin>2.12</maven.surefire.plugin>
+        <maven.site.plugin>3.2</maven.site.plugin>
+        <maven.sonar.plugin>3.3.1</maven.sonar.plugin>
+        <maven.source.plugin>2.2.1</maven.source.plugin>
+        <maven.surefire.plugin>2.12.4</maven.surefire.plugin>
         <maven.taglist.plugin>2.4</maven.taglist.plugin>
         <maven.test.failure.ignore>false</maven.test.failure.ignore>
         <maven.test.skip>false</maven.test.skip>
-        <maven.tomcat.plugin>2.0-beta-1</maven.tomcat.plugin>
+        <maven.tomcat.plugin>2.0</maven.tomcat.plugin>
         <maven.version.range>[2.2.1,3.1.0)</maven.version.range>
         <maven.versions.plugin>1.3.1</maven.versions.plugin>
-        <maven.war.plugin>2.2</maven.war.plugin>
-        <mockito.version>1.9.5-rc1</mockito.version>
+        <maven.war.plugin>2.3</maven.war.plugin>
+        <mockito.version>1.9.5</mockito.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <querydsl.version>2.8.2</querydsl.version>
         <rome.version>1.0</rome.version>
         <servlet.version>2.5</servlet.version>
-        <slf4j.version>1.6.6</slf4j.version>
+        <slf4j.version>1.7.2</slf4j.version>
         <sonar.dynamicAnalysis>false</sonar.dynamicAnalysis>
         <sonar.phase>generate-sources</sonar.phase>
-        <spring.data.jpa.version>1.2.0.M1</spring.data.jpa.version>
-        <spring.security.version>3.1.1.RELEASE</spring.security.version>
-        <spring.version>3.2.0.M1</spring.version>
-        <spring.ws.version>2.1.0.RELEASE</spring.ws.version>
+        <spring.data.jpa.version>1.2.0.RELEASE</spring.data.jpa.version>
+        <spring.security.version>3.1.3.RELEASE</spring.security.version>
+        <spring.version>3.2.0.RC1</spring.version>
+        <spring.ws.version>2.1.1.RELEASE</spring.ws.version>
         <stax.version>1.0.1</stax.version>
         <sysout.slf4j.version>1.0.2</sysout.slf4j.version>
         <validation.version>1.0.0.GA</validation.version>
         <wsdl4j.version>1.6.2</wsdl4j.version>
-        <wss4j.version>1.5.10</wss4j.version>
+        <wss4j.version>1.5.12-patch-01</wss4j.version>
         <wtp.version>2.0</wtp.version>
         <xalan.version>2.7.1</xalan.version>
-        <xbean.version>3.11.1</xbean.version>
+        <xbean.version>3.12</xbean.version>
         <xerces.version>2.10.0</xerces.version>
     </properties>
 
@@ -185,6 +189,10 @@
         <dependency>
             <groupId>uk.org.lidalia</groupId>
             <artifactId>sysout-over-slf4j</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.janino</groupId>
+            <artifactId>janino</artifactId>
         </dependency>
     </dependencies>
 
@@ -314,12 +322,12 @@
             <dependency>
                 <groupId>javax.xml.bind</groupId>
                 <artifactId>jaxb-api</artifactId>
-                <version>${jaxb.version}</version>
+                <version>${jaxb-api.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.sun.xml.bind</groupId>
                 <artifactId>jaxb-impl</artifactId>
-                <version>${jaxb.version}</version>
+                <version>${jaxb-impl.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.geronimo.specs</groupId>
@@ -341,6 +349,11 @@
                 <groupId>org.springframework.data</groupId>
                 <artifactId>spring-data-jpa</artifactId>
                 <version>${spring.data.jpa.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.mysema.querydsl</groupId>
+                <artifactId>querydsl-jpa</artifactId>
+                <version>${querydsl.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
@@ -385,28 +398,12 @@
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
-                <artifactId>spring-instrument</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
                 <artifactId>spring-tx</artifactId>
                 <version>${spring.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-core</artifactId>
-                <version>${spring.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>commons-logging</groupId>
-                        <artifactId>commons-logging</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-asm</artifactId>
                 <version>${spring.version}</version>
                 <exclusions>
                     <exclusion>
@@ -732,6 +729,11 @@
             </dependency>
             <!-- Logging with SLF4J & LogBack -->
             <dependency>
+                <groupId>org.codehaus.janino</groupId>
+                <artifactId>janino</artifactId>
+                <version>${janino.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>jcl-over-slf4j</artifactId>
                 <version>${slf4j.version}</version>
@@ -864,6 +866,30 @@
         <pluginManagement>
             <plugins>
                 <plugin>
+                    <groupId>com.mysema.maven</groupId>
+                    <artifactId>maven-apt-plugin</artifactId>
+                    <version>${maven-apt-plugin.version}</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>com.mysema.querydsl</groupId>
+                            <artifactId>querydsl-apt</artifactId>
+                            <version>${querydsl.version}</version>
+                        </dependency>
+                    </dependencies>
+                    <executions>
+                        <execution>
+                            <phase>generate-sources</phase>
+                            <goals>
+                                <goal>process</goal>
+                            </goals>
+                            <configuration>
+                                <outputDirectory>target/generated-sources</outputDirectory>
+                                <processor>com.mysema.query.apt.jpa.JPAAnnotationProcessor</processor>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-deploy-plugin</artifactId>
                     <version>${maven.deploy.plugin}</version>
@@ -957,6 +983,13 @@
                         </reportPlugins>
                         <locales>en</locales>
                     </configuration>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.apache.maven.doxia</groupId>
+                            <artifactId>doxia-module-markdown</artifactId>
+                            <version>${doxia-module-markdown.version}</version>
+                        </dependency>
+                    </dependencies>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -996,6 +1029,13 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-source-plugin</artifactId>
                     <version>${maven.source.plugin}</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>jar</goal>
+                            </goals>
+                        </execution>
+                    </executions>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<project name="GreenPages" xmlns="http://maven.apache.org/DECORATION/1.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0
+           http://maven.apache.org/xsd/decoration-1.0.0.xsd">
+    <bannerLeft>
+        <name>Enterprise Spring Best Practices</name>
+        <src>images/technophile-blog.png</src>
+        <href>http://technophile.gordondickens.com</href>
+    </bannerLeft>
+    <body>
+        <links>
+            <item name="Technophile Blog" href="http://technophile.gordondickens.com"/>
+            <item name="About Gordon Dickens" href="http://www.gordondickens.com"/>
+            <item name="Spring Framework" href="http://www.springsource.org"/>
+            <item name="Spring Documentation" href="http://www.springsource.org/spring-framework#documentation"/>
+        </links>
+        <menu name="Project Information">
+            <item name="Project" href="index.html"/>
+        </menu>
+        <menu ref="reports"/>
+    </body>
+</project>
