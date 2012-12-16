@@ -71,6 +71,7 @@
         <javaws.version>2.1-1</javaws.version>
         <jaxb-api.version>2.2.7</jaxb-api.version>
         <jaxb-impl.version>2.2.7-b41</jaxb-impl.version>
+        <jboss-logging.version>3.1.2.GA</jboss-logging.version>
         <jms.version>1.1.1</jms.version>
         <jodatime.hibernate.version>1.3</jodatime.hibernate.version>
         <jodatime.version>2.1</jodatime.version>
@@ -849,6 +850,11 @@
                 <artifactId>h2</artifactId>
                 <version>${h2database.version}</version>
                 <scope>runtime</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.logging</groupId>
+                <artifactId>jboss-logging</artifactId>
+                <version>${jboss-logging.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
