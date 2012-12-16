@@ -62,7 +62,7 @@
         <url-pattern>/logbackStatus</url-pattern>
     </servlet-mapping>
 
-     Tee Filter is used to be able to log HTTP Request & Response Messages - see logback-access.xml
+     <!--Tee Filter is used to be able to log HTTP Request & Response Messages - see logback-access.xml-->
     <filter>
         <filter-name>TeeFilter</filter-name>
         <filter-class>ch.qos.logback.access.servlet.TeeFilter</filter-class>
