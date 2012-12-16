@@ -40,46 +40,46 @@
 </configuration>
 
 
-    <!--  ***** ****************************************** ***** -->
-    <!--  *****               ADD TO WEB.XML               ***** -->
-    <!--  ***** ****************************************** ***** -->
+        <!--  ***** ****************************************** ***** -->
+        <!--  *****               ADD TO WEB.XML               ***** -->
+        <!--  ***** ****************************************** ***** -->
 
-    <!--  ***** ****************************************** ***** -->
-    <!--  *****     Handling System.out and System.err     ***** -->
-    <!--  ***** ****************************************** ***** -->
-    <!--
-    <listener>
-        <listener-class>uk.org.lidalia.sysoutslf4j.context.SysOutOverSLF4JServletContextListener</listener-class>
-    </listener>
-    -->
+        <!--  ***** ****************************************** ***** -->
+        <!--  *****     Handling System.out and System.err     ***** -->
+        <!--  ***** ****************************************** ***** -->
+        <!--
+        <listener>
+            <listener-class>uk.org.lidalia.sysoutslf4j.context.SysOutOverSLF4JServletContextListener</listener-class>
+        </listener>
+        -->
 
-    <!--  ***** ****************************************************** ***** -->
-    <!--  ***** Handling HttpRequest and HttpResponse w Logback-Access ***** -->
-    <!--  ***** ****************************************************** ***** -->
-    <!--
-    <filter>
-        <filter-name>TeeFilter</filter-name>
-        <filter-class>ch.qos.logback.access.servlet.TeeFilter</filter-class>
-    </filter>
-    <filter-mapping>
-        <filter-name>TeeFilter</filter-name>
-        <url-pattern>/*</url-pattern>
-    </filter-mapping>
-    -->
+        <!--  ***** ****************************************************** ***** -->
+        <!--  ***** Handling HttpRequest and HttpResponse w Logback-Access ***** -->
+        <!--  ***** ****************************************************** ***** -->
+        <!--
+        <filter>
+            <filter-name>TeeFilter</filter-name>
+            <filter-class>ch.qos.logback.access.servlet.TeeFilter</filter-class>
+        </filter>
+        <filter-mapping>
+            <filter-name>TeeFilter</filter-name>
+            <url-pattern>/*</url-pattern>
+        </filter-mapping>
+        -->
 
-    <!--  ***** ******************************************  ***** -->
-    <!--  ***** Providing URL for Logback Status (Optional) ***** -->
-    <!--  ***** With OnStatusConsoleListener (above)        ***** -->
-    <!--  ***** ******************************************  ***** -->
-    <!--
-    <servlet>
-        <servlet-name>ViewStatusMessages</servlet-name>
-        <servlet-class>ch.qos.logback.classic.ViewStatusMessagesServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>ViewStatusMessages</servlet-name>
-        <url-pattern>/logbackStatus</url-pattern>
-    </servlet-mapping>
-    -->
+        <!--  ***** ******************************************  ***** -->
+        <!--  ***** Providing URL for Logback Status (Optional) ***** -->
+        <!--  ***** With OnStatusConsoleListener (above)        ***** -->
+        <!--  ***** ******************************************  ***** -->
+        <!--
+        <servlet>
+            <servlet-name>ViewStatusMessages</servlet-name>
+            <servlet-class>ch.qos.logback.classic.ViewStatusMessagesServlet</servlet-class>
+        </servlet>
+        <servlet-mapping>
+            <servlet-name>ViewStatusMessages</servlet-name>
+            <url-pattern>/logbackStatus</url-pattern>
+        </servlet-mapping>
+        -->
 
-    <!--  ***** ******************************************  ***** -->
+        <!--  ***** ******************************************  ***** -->

@@ -26,10 +26,10 @@
         </encoder>
     </appender>
 
-    <logger name="com.gordondickens.enterprisespring" level="debug" />
+    <logger name="com.gordondickens.enterprisespring" level="debug"/>
 
-	<root level="warn">
-		<appender-ref ref="console" />
-		<appender-ref ref="file" />
-	</root>
+    <root level="warn">
+        <appender-ref ref="console"/>
+        <appender-ref ref="file"/>
+    </root>
 </configuration>

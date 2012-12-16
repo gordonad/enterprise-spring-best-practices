@@ -4,12 +4,12 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 /**
- * @author Gordon Dickens
- *         Date: 11/18/12
- *         Time: 5:29 PM
+ * Date: 11/18/12
+ *
+ * @author Gordon Dickens Dickens
  */
 @Entity
-public class ItemEntity {
+public class ItemEntity extends BaseEntity {
     @Id
     Integer id;
 
@@ -26,4 +26,5 @@ public class ItemEntity {
     public void setName(String name) {
         this.name = name;
     }
+
 }

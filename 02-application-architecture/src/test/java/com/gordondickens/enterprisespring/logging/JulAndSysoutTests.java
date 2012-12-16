@@ -18,7 +18,7 @@ public class JulAndSysoutTests {
     private static final Logger logger = LoggerFactory.getLogger(JulAndSysoutTests.class);
 
     java.util.logging.Logger julLogger = java.util.logging.Logger
-        .getLogger("com.gordondickens.enterprisespring");
+            .getLogger("com.gordondickens.enterprisespring");
 
     @Test
     public void logJulMessage() {

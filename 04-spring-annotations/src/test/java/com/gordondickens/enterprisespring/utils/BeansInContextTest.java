@@ -14,7 +14,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import java.lang.annotation.Annotation;
 
 /**
- * @author gordon
+ * @author Gordon Dickens
  */
 @ContextConfiguration
 @RunWith(SpringJUnit4ClassRunner.class)

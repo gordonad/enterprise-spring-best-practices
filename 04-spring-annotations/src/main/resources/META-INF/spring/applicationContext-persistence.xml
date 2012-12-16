@@ -7,7 +7,7 @@
          http://www.springframework.org/schema/context
          http://www.springframework.org/schema/context/spring-context.xsd">
 
-    
+
     <!-- Include both the Repository and Domain (entity) packages -->
     <context:component-scan
             base-package="com.gordondickens.enterprisespring.repository,com.gordondickens.enterprisespring.domain"/>

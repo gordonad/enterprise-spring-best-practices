@@ -5,8 +5,7 @@ import com.gordondickens.enterprisespring.repository.AccountRepository;
 import javax.sql.DataSource;
 
 /**
- *
- * @author gordon
+ * @author Gordon Dickens
  *         Date: 2012-07-30
  */
 public class AccountRepositoryImpl implements AccountRepository {
