@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.gordondickens.enterprise.spring</groupId>
     <artifactId>enterprise-spring-parent</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
 
     <packaging>pom</packaging>
     <name>*** Gordon's Super Pom ***</name>
@@ -155,12 +155,8 @@
             <artifactId>hsqldb</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-entitymanager</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring-aspects</artifactId>
+            <artifactId>spring-context-support</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -214,10 +210,6 @@
             <groupId>org.codehaus.janino</groupId>
             <artifactId>janino</artifactId>
         </dependency>
-
-
-
-
     </dependencies>
 
     <!-- Centrally manage all versions & transitive dependency versions -->
@@ -905,6 +897,7 @@
     </repositories>
 
     <build>
+        <defaultGoal>install</defaultGoal>
         <pluginManagement>
             <plugins>
                 <plugin>

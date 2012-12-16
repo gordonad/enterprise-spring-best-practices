@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+            http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5">
+
+    <display-name>Enterprise Spring Best Practices</display-name>
+
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <!-- Class to determine connectivity and switch context as necessary
+         Online vs Offline Connection -->
+    <context-param>
+        <param-name>contextInitializerClasses</param-name>
+        <param-value>com.gordondickens.enterprisespring.infrastructure.ApplicationContextInitializer</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>contextClass</param-name>
+        <param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
+    </context-param>
+
+    <!-- Location of Java @Configuration classes that configure the components
+        that makeup this application - Configuration locations consist of one or more comma/space-delimited
+         fully-qualified @Configuration classes or fully-qualified packages for component-scanning -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>com.gordondickens.enterprisespring.infrastructure.config.ApplicationConfig</param-value>
+    </context-param>
+
+    <!-- Spring Dispatcher Servlet configured to discover JavaConfig class(es), registering web & RESTful ws -->
+    <servlet>
+        <servlet-name>demo</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextClass</param-name>
+            <param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
+        </init-param>
+        <!-- Point to an empty package -->
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>com.gordondickens.enterprisespring.infrastructure.config.web.RestWebServiceConfig</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <!-- Logback logger - Status Page -->
+    <servlet>
+        <servlet-name>LogbackStatus</servlet-name>
+        <servlet-class>ch.qos.logback.classic.ViewStatusMessagesServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>demo</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogbackStatus</servlet-name>
+        <url-pattern>/logbackStatus</url-pattern>
+    </servlet-mapping>
+
+     Tee Filter is used to be able to log HTTP Request & Response Messages - see logback-access.xml
+    <filter>
+        <filter-name>TeeFilter</filter-name>
+        <filter-class>ch.qos.logback.access.servlet.TeeFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>TeeFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <session-config>
+        <session-timeout>60</session-timeout>
+    </session-config>
+
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type>
+        <location>/error</location>
+    </error-page>
+
+    <welcome-file-list>
+        <welcome-file>/index.html</welcome-file>
+    </welcome-file-list>
+</web-app>

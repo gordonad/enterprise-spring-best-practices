@@ -1,18 +1,18 @@
 package com.gordondickens.enterprisespring.service;
 
-import com.gordondickens.enterprisespring.repository.ItemRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.gordondickens.enterprisespring.domain.ItemEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
+ * Date: 11/18/12
+ *
  * @author Gordon Dickens
- *         Date: 11/18/12
- *         Time: 5:35 PM
  */
 @Service
 @Transactional
-public class ItemService {
-    @Autowired
-    ItemRepository itemRepository;
+public interface ItemService {
+
+    public ItemEntity findItemById(final Integer id);
+
 }

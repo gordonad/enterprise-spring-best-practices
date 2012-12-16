@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true" scan="true" scanPeriod="30 seconds">
+
+
+    <!-- ***** RE-ROUTE THE AWFUL java.util.logging to SLF4J config ***** -->
+    <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
+        <resetJUL>true</resetJUL>
+    </contextListener>
+
+    <!-- ***** JMX Logging Config Management ***** -->
+    <jmxConfigurator/>
+
+    <property name="log.dir" value="${user.dir}/logs"/>
+
+    <!-- *************************************************************** -->
+    <!-- ***** HIBERNATE JPA ORM JDBC ***** HIBERNATE JPA ORM JDBC ***** -->
+    <!-- *************************************************************** -->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%date{HH:mm}|%.-1level| %msg%n</pattern>
+        </encoder>
+    </appender>
+    <!-- *************************************************************** -->
+
+
+    <appender name="appfile"
+              class="ch.qos.logback.core.FileAppender">
+        <file>${log.dir}/app.log</file>
+        <append>false</append>
+
+        <encoder>
+            <pattern>%date{HH:mm}|%.-1level|%-40.40logger{0}|%msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger level="debug"  additivity="false" name="com.gordondickens">
+        <appender-ref ref="appfile"/>
+        <appender-ref ref="console"/>
+    </logger>
+    <!-- *************************************************************** -->
+
+
+    <!-- *************************************************************** -->
+    <!-- ***** SPRING SPRING SPRINGITY SPRING ***** SPRING SPRING  ***** -->
+    <!-- *************************************************************** -->
+    <!--<appender name="springfile"-->
+              <!--class="ch.qos.logback.core.FileAppender">-->
+        <!--<file>${log.dir}/spring.log</file>-->
+        <!--<append>false</append>-->
+        <!--<encoder>-->
+            <!--<pattern>%d{HH:mm}|%.-1level| %msg%n</pattern>-->
+        <!--</encoder>-->
+    <!--</appender>-->
+
+    <!--<logger name="org.springframework" additivity="false" level="debug">-->
+        <!--<appender-ref ref="springfile"/>-->
+    <!--</logger>-->
+
+    <!--<logger name="org.springframework.aop" additivity="false" level="debug">-->
+    <!--<appender-ref ref="springfile"/>-->
+    <!--</logger>-->
+    <!--<logger name="org.springframework.beans" additivity="false" level="debug">-->
+    <!--<appender-ref ref="springfile"/>-->
+    <!--</logger>-->
+    <!--<logger name="org.springframework.cache" additivity="false" level="debug">-->
+    <!--<appender-ref ref="springfile"/>-->
+    <!--</logger>-->
+
+    <!--<logger name="org.springframework.context" additivity="false" level="debug">-->
+    <!--<appender-ref ref="springfile"/>-->
+    <!--<appender-ref ref="console"/>-->
+    <!--</logger>-->
+    <!--<logger name="org.springframework.data.jpa.support" additivity="false" level="debug">-->
+    <!--<appender-ref ref="springfile"/>-->
+    <!--<appender-ref ref="console"/>-->
+    <!--</logger>-->
+
+    <!--<logger name="org.springframework.ejb" additivity="false" level="debug">-->
+    <!--<appender-ref ref="springfile"/>-->
+    <!--</logger>-->
+    <!--<logger name="org.springframework.expression" additivity="false" level="debug">-->
+    <!--<appender-ref ref="springfile"/>-->
+    <!--</logger>-->
+    <!--<logger name="org.springframework.format" additivity="false" level="debug">-->
+    <!--<appender-ref ref="springfile"/>-->
+    <!--</logger>-->
+    <!--<logger name="org.springframework.http" additivity="false" level="debug">-->
+    <!--<appender-ref ref="springfile"/>-->
+    <!--</logger>-->
+    <!--<logger name="org.springframework.jmx" additivity="false" level="debug">-->
+    <!--<appender-ref ref="springfile"/>-->
+    <!--</logger>-->
+    <!--<logger name="org.springframework.jndi" additivity="false" level="debug">-->
+    <!--<appender-ref ref="springfile"/>-->
+    <!--</logger>-->
+    <!--<logger name="org.springframework.mail" additivity="false" level="debug">-->
+    <!--<appender-ref ref="springfile"/>-->
+    <!--</logger>-->
+    <!--<logger name="org.springframework.scheduling" additivity="false" level="debug">-->
+    <!--<appender-ref ref="springfile"/>-->
+    <!--</logger>-->
+    <!--<logger name="org.springframework.scripting" additivity="false" level="debug">-->
+    <!--<appender-ref ref="springfile"/>-->
+    <!--</logger>-->
+    <!--<logger name="org.springframework.stereotype" additivity="false" level="debug">-->
+    <!--<appender-ref ref="springfile"/>-->
+    <!--</logger>-->
+    <!--<logger name="org.springframework.util" additivity="false" level="debug">-->
+    <!--<appender-ref ref="springfile"/>-->
+    <!--</logger>-->
+    <!--<logger name="org.springframework.validation" additivity="false" level="debug">-->
+    <!--<appender-ref ref="springfile"/>-->
+    <!--</logger>-->
+    <!--<logger name="org.springframework.webflow" additivity="false" level="debug">-->
+    <!--<appender-ref ref="springfile"/>-->
+    <!--</logger>-->
+
+
+    <appender name="springwebfile" class="ch.qos.logback.core.FileAppender">
+        <file>${log.dir}/spring-web.log</file>
+        <append>false</append>
+        <encoder>
+            <pattern>%.-1level| %msg%n%n</pattern>
+            <!--<pattern>%.-1level|%-40.40logger{0}| %msg%n%n</pattern>-->
+        </encoder>
+    </appender>
+    <logger name="org.springframework.web" additivity="false" level="trace">
+        <appender-ref ref="springwebfile"/>
+        <appender-ref ref="console"/>
+    </logger>
+    <!--<logger name="org.springframework.web.servlet.handler" additivity="false" level="trace">-->
+
+    <!--<logger name="org.springframework.web.servlet.config.annotation" additivity="false" level="debug">-->
+    <!--<logger name="org.springframework.web" additivity="false" level="debug">-->
+        <!--<appender-ref ref="console"/>-->
+    <!--</logger>-->
+
+
+    <!-- *************************************************************** -->
+
+
+    <!-- *************************************************************** -->
+    <!-- ***** HIBERNATE JPA ORM JDBC ***** HIBERNATE JPA ORM JDBC ***** -->
+    <!-- *************************************************************** -->
+    <appender name="hibernatefile"
+              class="ch.qos.logback.core.FileAppender">
+        <file>${log.dir}/hibernate.log</file>
+        <append>false</append>
+        <encoder>
+            <pattern>%d{HH:mm}|%.-1level|%-40.40logger{0}|%msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <logger name="org.hibernate" additivity="false" level="debug">
+        <appender-ref ref="hibernatefile"/>
+    </logger>
+    <logger name="org.springframework.orm" additivity="false" level="debug">
+        <appender-ref ref="hibernatefile"/>
+    </logger>
+    <logger name="org.springframework.dao" additivity="false" level="debug">
+        <appender-ref ref="hibernatefile"/>
+    </logger>
+    <logger name="org.springframework.data" additivity="false" level="debug">
+        <appender-ref ref="hibernatefile"/>
+    </logger>
+    <logger name="org.springframework.jdbc" additivity="false" level="debug">
+        <appender-ref ref="hibernatefile"/>
+    </logger>
+    <logger name="org.springframework.transaction" additivity="false" level="debug">
+        <appender-ref ref="hibernatefile"/>
+    </logger>
+    <!--<logger name="net.sf.ehcache" additivity="false" level="debug">-->
+    <!--<appender-ref ref="hibernatefile"/>-->
+    <!--</logger>-->
+    <!--<logger name="org.hibernate.hql.ast" additivity="false" level="debug">-->
+    <!--<appender-ref ref="hibernatefile"/>-->
+    <!--</logger>-->
+    <!--<logger name="org.hibernate.cache" additivity="false" level="debug">-->
+    <!--<appender-ref ref="hibernatefile"/>-->
+    <!--</logger>-->
+    <!--<logger name="org.hibernate.ejb" additivity="false" level="debug">-->
+    <!--<appender-ref ref="hibernatefile"/>-->
+    <!--</logger>-->
+    <!--<logger name="org.hibernate.jdbc" additivity="false" level="debug">-->
+    <!--<appender-ref ref="hibernatefile"/>-->
+    <!--</logger>-->
+    <!--<logger name="org.hibernate.pretty" additivity="false" level="debug">-->
+    <!--<appender-ref ref="hibernatefile"/>-->
+    <!--</logger>-->
+    <!--<logger name="org.hibernate.sql" additivity="false" level="debug">-->
+        <!--<appender-ref ref="hibernatefile"/>-->
+    <!--</logger>-->
+    <!--<logger name="org.hibernate.transaction" additivity="false" level="debug">-->
+    <!--<appender-ref ref="hibernatefile"/>-->
+    <!--</logger>-->
+    <!--<logger name="org.hibernate.type" additivity="false" level="debug">-->
+    <!--<appender-ref ref="hibernatefile"/>-->
+    <!--</logger>-->
+    <!--<logger name="org.hibernate.tool.hbm2ddl" additivity="false" level="debug">-->
+        <!--<appender-ref ref="hibernatefile"/>-->
+    <!--</logger>-->
+    <!-- *************************************************************** -->
+
+
+    <!-- *************************************************************** -->
+    <!-- *****  JETTY JETTY JETTY  ***** JETTY JETTY JETTY JETTY   ***** -->
+    <!-- *************************************************************** -->
+    <!--<appender name="jettyfile"-->
+    <!--class="ch.qos.logback.core.FileAppender">-->
+    <!--<file>${log.dir}/jetty.log</file>-->
+    <!--<append>false</append>-->
+    <!--<encoder>-->
+    <!--<pattern>%date{HH:mm}|%.-1level|%-40.40logger{0}|%msg%n</pattern>-->
+    <!--</encoder>-->
+    <!--</appender>-->
+
+    <!--<logger name="org.eclipse.jetty" additivity="false" level="trace">-->
+    <!--<appender-ref ref="jettyfile"/>-->
+    <!--</logger>-->
+
+    <!-- *************************************************************** -->
+
+
+    <!--<logger name="com.gordondickens" level="debug"/>-->
+
+    <root level="warn">
+        <appender-ref ref="console"/>
+    </root>
+</configuration>
