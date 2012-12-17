@@ -15,7 +15,7 @@
          Online vs Offline Connection -->
     <context-param>
         <param-name>contextInitializerClasses</param-name>
-        <param-value>com.gordondickens.enterprisespring.infrastructure.ApplicationContextInitializer</param-value>
+        <param-value>com.gordondickens.enterprisespring.infrastructure.AppContextConfigurer</param-value>
     </context-param>
 
     <context-param>

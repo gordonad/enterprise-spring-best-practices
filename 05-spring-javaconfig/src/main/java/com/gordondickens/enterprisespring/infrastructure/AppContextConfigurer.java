@@ -3,6 +3,7 @@ package com.gordondickens.enterprisespring.infrastructure;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
 
 import java.util.Map;
@@ -13,10 +14,9 @@ import java.util.Map;
  *
  * @author Gordon Dickens
  */
-public class ApplicationContextInitializer implements
-        org.springframework.context.ApplicationContextInitializer {
+public class AppContextConfigurer implements ApplicationContextInitializer {
     private static final Logger logger = LoggerFactory
-            .getLogger(ApplicationContextInitializer.class);
+            .getLogger(AppContextConfigurer.class);
 
     //TODO Set Key to Discriminator for connectivity
     private static final String CONNECTION_KEY = "someKey";
