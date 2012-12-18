@@ -104,7 +104,7 @@
         <maven-jxr-plugin.version>2.3</maven-jxr-plugin.version>
         <maven-plugin-plugin.version>3.2</maven-plugin-plugin.version>
         <maven-pmd-plugin.version>2.7.1</maven-pmd-plugin.version>
-        <maven-project-info-reports-plugin.version>2.6.1</maven-project-info-reports-plugin.version>
+        <maven-project-info-reports-plugin.version>2.6</maven-project-info-reports-plugin.version>
         <maven-release-plugin.version>2.3.2</maven-release-plugin.version>
         <maven-resources-plugin.version>2.6</maven-resources-plugin.version>
         <maven-selenium-plugin.version>2.3</maven-selenium-plugin.version>
@@ -809,7 +809,6 @@
                 <artifactId>sysout-over-slf4j</artifactId>
                 <version>${sysout.slf4j.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>rome</groupId>
                 <artifactId>rome</artifactId>
@@ -1008,12 +1007,12 @@
                                 <groupId>org.apache.maven.plugins</groupId>
                                 <artifactId>maven-pmd-plugin</artifactId>
                                 <version>${maven-pmd-plugin.version}</version>
-                                <inherited>true</inherited>
                                 <configuration>
                                     <rulesets>
                                         <ruleset>/rulesets/basic.xml</ruleset>
                                         <ruleset>/rulesets/controversial.xml</ruleset>
                                     </rulesets>
+                                    <aggregate>true</aggregate>
                                     <sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
                                     <minimumTokens>100</minimumTokens>
                                     <targetJdk>${jdk.version}</targetJdk>
@@ -1023,13 +1022,31 @@
                                 <groupId>org.codehaus.mojo</groupId>
                                 <artifactId>findbugs-maven-plugin</artifactId>
                                 <version>${maven-findbugs-plugin.version}</version>
-                                <inherited>true</inherited>
                             </plugin>
                             <plugin>
                                 <groupId>org.codehaus.mojo</groupId>
                                 <artifactId>taglist-maven-plugin</artifactId>
                                 <version>${maven-taglist-plugin.version}</version>
-                                <inherited>true</inherited>
+                                <configuration>
+                                    <aggregate>true</aggregate>
+                                    <tagListOptions>
+                                        <tagClasses>
+                                            <tagClass>
+                                                <displayName>Todo Work</displayName>
+                                                <tags>
+                                                    <tag>
+                                                        <matchString>todo</matchString>
+                                                        <matchType>ignoreCase</matchType>
+                                                    </tag>
+                                                    <tag>
+                                                        <matchString>FIXME</matchString>
+                                                        <matchType>exact</matchType>
+                                                    </tag>
+                                                </tags>
+                                            </tagClass>
+                                        </tagClasses>
+                                    </tagListOptions>
+                                </configuration>
                             </plugin>
                         </reportPlugins>
                         <locales>en</locales>
@@ -1072,6 +1089,9 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>${maven-compiler-plugin.version}</version>
                     <configuration>
+                        <compilerArguments>
+                            <Xlint/>
+                        </compilerArguments>
                         <source>${jdk.version}</source>
                         <target>${jdk.version}</target>
                     </configuration>
