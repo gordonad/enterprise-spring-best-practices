@@ -140,7 +140,7 @@
         <wtp.version>2.0</wtp.version>
         <xalan.version>2.7.1</xalan.version>
         <xbean.version>3.12</xbean.version>
-        <xerces.version>2.10.0</xerces.version>
+        <xerces.version>2.12.0</xerces.version>
     </properties>
 
     <modules>
