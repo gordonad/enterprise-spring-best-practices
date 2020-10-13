@@ -77,7 +77,7 @@
         <jodatime.version>2.1</jodatime.version>
         <jstl.version>1.2</jstl.version>
         <jta.version>1.1</jta.version>
-        <junit.version>4.11</junit.version>
+        <junit.version>4.13.1</junit.version>
         <logback.version>1.0.9</logback.version>
         <maven-antrun-plugin.version>1.7</maven-antrun-plugin.version>
         <maven-apt-plugin.version>1.0.4</maven-apt-plugin.version>
