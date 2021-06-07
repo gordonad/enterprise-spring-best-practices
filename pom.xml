@@ -78,7 +78,7 @@
         <jstl.version>1.2</jstl.version>
         <jta.version>1.1</jta.version>
         <junit.version>4.11</junit.version>
-        <logback.version>1.0.9</logback.version>
+        <logback.version>1.2.0</logback.version>
         <maven-antrun-plugin.version>1.7</maven-antrun-plugin.version>
         <maven-apt-plugin.version>1.0.4</maven-apt-plugin.version>
         <maven-aspectj-plugin.version>1.4</maven-aspectj-plugin.version>
