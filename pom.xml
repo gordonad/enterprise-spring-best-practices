@@ -55,7 +55,7 @@
         <geronimo.jta.version>1.1.1</geronimo.jta.version>
         <geronimo.ws.version>1.1.3</geronimo.ws.version>
         <hamcrest.version>1.3</hamcrest.version>
-        <h2database.version>1.3.170</h2database.version>
+        <h2database.version>2.0.206</h2database.version>
         <hibernate.jmx.version>3.5.6-Final</hibernate.jmx.version>
         <hibernate.jpa.version>1.0.1.Final</hibernate.jpa.version>
         <hibernate.validator.version>4.3.0.Final</hibernate.validator.version>
