@@ -59,7 +59,7 @@
         <hibernate.jmx.version>3.5.6-Final</hibernate.jmx.version>
         <hibernate.jpa.version>1.0.1.Final</hibernate.jpa.version>
         <hibernate.validator.version>4.3.0.Final</hibernate.validator.version>
-        <hibernate.version>4.1.9.Final</hibernate.version>
+        <hibernate.version>5.4.24.Final</hibernate.version>
         <!--<hibernate.version>3.6.10.Final</hibernate.version>-->
         <hsqldb.version>2.2.9</hsqldb.version>
         <jackson.version>1.9.11</jackson.version>
