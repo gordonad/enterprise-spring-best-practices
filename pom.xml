@@ -48,7 +48,7 @@
         <commons.lang2.version>2.6</commons.lang2.version>
         <commons.net.version>3.2</commons.net.version>
         <commons.pool.version>1.6</commons.pool.version>
-        <derby.version>10.9.1.0</derby.version>
+        <derby.version>10.14.2.0</derby.version>
         <dom4j.version>1.6.1</dom4j.version>
         <ehcache.version>2.6.2</ehcache.version>
         <geronimo.jee.version>1.0.1</geronimo.jee.version>
