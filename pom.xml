@@ -136,7 +136,7 @@
         <sysout.slf4j.version>1.0.2</sysout.slf4j.version>
         <validation.version>1.0.0.GA</validation.version>
         <wsdl4j.version>1.6.2</wsdl4j.version>
-        <wss4j.version>1.6.8</wss4j.version>
+        <wss4j.version>1.6.17</wss4j.version>
         <wtp.version>2.0</wtp.version>
         <xalan.version>2.7.1</xalan.version>
         <xbean.version>3.12</xbean.version>
