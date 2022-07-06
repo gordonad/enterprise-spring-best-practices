@@ -64,7 +64,7 @@
         <hsqldb.version>2.2.9</hsqldb.version>
         <jackson.version>1.9.11</jackson.version>
         <janino.version>2.6.1</janino.version>
-        <jasypt.version>1.9.0</jasypt.version>
+        <jasypt.version>1.9.2</jasypt.version>
         <javamail.version>1.4.6-rc1</javamail.version>
         <javassist.version>3.17.1-GA</javassist.version>
         <jdk.version>1.6</jdk.version>
