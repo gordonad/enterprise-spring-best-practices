@@ -138,7 +138,7 @@
         <wsdl4j.version>1.6.2</wsdl4j.version>
         <wss4j.version>1.6.8</wss4j.version>
         <wtp.version>2.0</wtp.version>
-        <xalan.version>2.7.1</xalan.version>
+        <xalan.version>2.7.2</xalan.version>
         <xbean.version>3.12</xbean.version>
         <xerces.version>2.10.0</xerces.version>
     </properties>
