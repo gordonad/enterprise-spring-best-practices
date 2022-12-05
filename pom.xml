@@ -46,7 +46,7 @@
         <commons.io.version>2.4</commons.io.version>
         <commons.lang3.version>3.1</commons.lang3.version>
         <commons.lang2.version>2.6</commons.lang2.version>
-        <commons.net.version>3.2</commons.net.version>
+        <commons.net.version>3.9.0</commons.net.version>
         <commons.pool.version>1.6</commons.pool.version>
         <derby.version>10.9.1.0</derby.version>
         <dom4j.version>1.6.1</dom4j.version>
