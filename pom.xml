@@ -862,17 +862,17 @@
         <pluginRepository>
             <id>spring-maven-release</id>
             <name>Spring Maven Release Repository</name>
-            <url>http://repo.springframework.org/release</url>
+            <url>https://repo.springframework.org/release</url>
         </pluginRepository>
         <pluginRepository>
             <id>spring-maven-milestone</id>
             <name>Spring Maven Milestone Repository</name>
-            <url>http://repo.springframework.org/milestone</url>
+            <url>https://repo.springframework.org/milestone</url>
         </pluginRepository>
         <pluginRepository>
             <id>spring.maven.snapshot</id>
             <name>Spring Snapshot Repository</name>
-            <url>http://repo.springframework.org/snapshot</url>
+            <url>https://repo.springframework.org/snapshot</url>
         </pluginRepository>
     </pluginRepositories>
 
@@ -880,24 +880,24 @@
         <repository>
             <id>spring.maven.release</id>
             <name>Spring Release Repository</name>
-            <url>http://repo.springframework.org/release</url>
+            <url>https://repo.springframework.org/release</url>
         </repository>
         <repository>
             <id>spring.maven.milestone</id>
             <name>Spring Milestone Repository</name>
-            <url>http://repo.springframework.org/milestone</url>
+            <url>https://repo.springframework.org/milestone</url>
         </repository>
         <repository>
             <id>spring.maven.snapshot</id>
             <name>Spring Snapshot Repository</name>
-            <url>http://repo.springframework.org/snapshot</url>
+            <url>https://repo.springframework.org/snapshot</url>
         </repository>
         <!-- JBoss repo only needed for Spring Security Dependency
       of com.sun.xml.wsit:xws-security:jar:1.3.1 -->
         <repository>
             <id>jboss.repository.releases.public</id>
             <name>JBoss Repo Public</name>
-            <url>http://repository.jboss.org/nexus/content/groups/public-jboss</url>
+            <url>https://repository.jboss.org/nexus/content/groups/public-jboss</url>
         </repository>
     </repositories>
 
