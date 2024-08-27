@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-
-<project name="GreenPages" xmlns="http://maven.apache.org/DECORATION/1.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0
-           http://maven.apache.org/xsd/decoration-1.0.0.xsd">
-    <bannerLeft>
-        <name>GreenPages</name>
-        <src>images/technophile-blog.png</src>
-        <href>http://technophile.gordondickens.com</href>
+<site xmlns="http://maven.apache.org/SITE/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://maven.apache.org/SITE/2.0.0 https://maven.apache.org/xsd/site-2.0.0.xsd">
+    <bannerLeft name="Enterprise Spring" href="http://www.gordondickens.guru">
+        <image src="images/technophile-blog.png"/>
     </bannerLeft>
+    <skin>
+        <groupId>org.apache.maven.skins</groupId>
+        <artifactId>maven-fluido-skin</artifactId>
+        <version>1.11.1</version>
+    </skin>
     <body>
         <links>
-            <item name="Technophile Blog" href="http://technophile.gordondickens.com"/>
             <item name="About Gordon Dickens" href="http://www.gordondickens.com"/>
             <item name="Spring Framework" href="http://www.springsource.org"/>
             <item name="Spring Documentation" href="http://www.springsource.org/spring-framework#documentation"/>
@@ -21,4 +20,4 @@
         </menu>
         <menu ref="reports"/>
     </body>
-</project>
+</site>
