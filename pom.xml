@@ -1342,7 +1342,7 @@
                 </plugin>
                 <plugin>
                     <groupId>org.codehaus.sonar</groupId>
-                    <artifactId>sonar-maven3-plugin</artifactId>
+                    <artifactId>sonar-maven-plugin</artifactId>
                     <version>${maven-sonar-plugin.version}</version>
                     <dependencies>
                         <dependency>
@@ -1467,7 +1467,7 @@
             </plugin>
             <plugin>
                 <groupId>org.codehaus.sonar</groupId>
-                <artifactId>sonar-maven3-plugin</artifactId>
+                <artifactId>sonar-maven-plugin</artifactId>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
