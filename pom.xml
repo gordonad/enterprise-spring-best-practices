@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-           http://maven.apache.org/maven-v4_0_0.xsd">
+           https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.gordondickens.enterprise.spring</groupId>
     <artifactId>enterprise-spring-parent</artifactId>
@@ -67,7 +67,7 @@
         <jasypt.version>1.9.0</jasypt.version>
         <javamail.version>1.5.0-b01</javamail.version>
         <javassist.version>3.17.1-GA</javassist.version>
-        <jdk.version>8</jdk.version>
+        <jdk.version>22</jdk.version>
         <javaws.version>2.1-1</javaws.version>
         <jaxb-api.version>2.2.7</jaxb-api.version>
         <jaxb-impl.version>2.2.7-b41</jaxb-impl.version>
@@ -79,7 +79,7 @@
         <jta.version>1.1</jta.version>
         <junit.version>4.13.2</junit.version>
         <logback.version>1.5.7</logback.version>
-<!--        <maven-antrun-plugin.version>1.7</maven-antrun-plugin.version>-->
+        <logback-access.version>2.0.1</logback-access.version>
         <maven-apt-plugin.version>1.0.42</maven-apt-plugin.version>
         <maven-aspectj-plugin.version>1.15.0</maven-aspectj-plugin.version>
         <maven-assembly-plugin.version>3.7.1</maven-assembly-plugin.version>
@@ -94,7 +94,6 @@
         <maven-enforcer-plugin.version>3.5.0</maven-enforcer-plugin.version>
         <maven-exec-plugin.version>3.4.1</maven-exec-plugin.version>
         <maven-failsafe-plugin.version>3.5.0</maven-failsafe-plugin.version>
-        <maven-findbugs-plugin.version>3.0.5</maven-findbugs-plugin.version>
         <maven-groovy-plugin.version>2.1.1</maven-groovy-plugin.version>
         <maven-help-plugin.version>3.5.0</maven-help-plugin.version>
         <maven-install-plugin.version>3.1.3</maven-install-plugin.version>
@@ -111,6 +110,7 @@
         <maven-site-plugin.version>3.20.0</maven-site-plugin.version>
         <maven-sonar-plugin.version>5.1</maven-sonar-plugin.version>
         <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
+        <maven-spotbugs-plugin.version>4.8.6</maven-spotbugs-plugin.version>
         <maven-surefire-plugin.version>3.5.0</maven-surefire-plugin.version>
         <maven-taglist-plugin.version>3.1.0</maven-taglist-plugin.version>
         <maven-tomcat-plugin.version>2.2</maven-tomcat-plugin.version>
@@ -148,7 +148,7 @@
         <module>02-application-architecture</module>
         <module>03-spring-xml</module>
         <module>04-spring-annotations</module>
-<!--        <module>05-spring-javaconfig</module>-->
+        <!--        <module>05-spring-javaconfig</module>-->
     </modules>
 
     <dependencies>
@@ -800,9 +800,9 @@
                 <version>${logback.version}</version>
             </dependency>
             <dependency>
-                <groupId>ch.qos.logback</groupId>
-                <artifactId>logback-access</artifactId>
-                <version>${logback.version}</version>
+                <groupId>ch.qos.logback.access</groupId>
+                <artifactId>common</artifactId>
+                <version>${logback-access.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -859,23 +859,23 @@
         </dependencies>
     </dependencyManagement>
 
-    <pluginRepositories>
-        <pluginRepository>
-            <id>spring-maven-release</id>
-            <name>Spring Maven Release Repository</name>
-            <url>http://repo.springframework.org/release</url>
-        </pluginRepository>
-        <pluginRepository>
-            <id>spring-maven-milestone</id>
-            <name>Spring Maven Milestone Repository</name>
-            <url>http://repo.springframework.org/milestone</url>
-        </pluginRepository>
-        <pluginRepository>
-            <id>spring.maven.snapshot</id>
-            <name>Spring Snapshot Repository</name>
-            <url>http://repo.springframework.org/snapshot</url>
-        </pluginRepository>
-    </pluginRepositories>
+    <!--    <pluginRepositories>-->
+    <!--        <pluginRepository>-->
+    <!--            <id>spring-maven-release</id>-->
+    <!--            <name>Spring Maven Release Repository</name>-->
+    <!--            <url>http://repo.springframework.org/release</url>-->
+    <!--        </pluginRepository>-->
+    <!--        <pluginRepository>-->
+    <!--            <id>spring-maven-milestone</id>-->
+    <!--            <name>Spring Maven Milestone Repository</name>-->
+    <!--            <url>http://repo.springframework.org/milestone</url>-->
+    <!--        </pluginRepository>-->
+    <!--        <pluginRepository>-->
+    <!--            <id>spring.maven.snapshot</id>-->
+    <!--            <name>Spring Snapshot Repository</name>-->
+    <!--            <url>http://repo.springframework.org/snapshot</url>-->
+    <!--        </pluginRepository>-->
+    <!--    </pluginRepositories>-->
 
     <repositories>
         <repository>
@@ -910,13 +910,13 @@
                     <groupId>org.apache.myfaces.tobago</groupId>
                     <artifactId>maven-apt-plugin</artifactId>
                     <version>${maven-apt-plugin.version}</version>
-<!--                    <dependencies>-->
-<!--                        <dependency>-->
-<!--                            <groupId>com.mysema.querydsl</groupId>-->
-<!--                            <artifactId>querydsl-apt</artifactId>-->
-<!--                            <version>${querydsl.version}</version>-->
-<!--                        </dependency>-->
-<!--                    </dependencies>-->
+                    <!--                    <dependencies>-->
+                    <!--                        <dependency>-->
+                    <!--                            <groupId>com.mysema.querydsl</groupId>-->
+                    <!--                            <artifactId>querydsl-apt</artifactId>-->
+                    <!--                            <version>${querydsl.version}</version>-->
+                    <!--                        </dependency>-->
+                    <!--                    </dependencies>-->
                     <executions>
                         <execution>
                             <phase>generate-sources</phase>
@@ -945,111 +945,6 @@
                     <artifactId>maven-site-plugin</artifactId>
                     <version>${maven-site-plugin.version}</version>
                     <configuration>
-                        <reportPlugins>
-                            <plugin>
-                                <groupId>org.apache.maven.plugins</groupId>
-                                <artifactId>maven-surefire-report-plugin</artifactId>
-                                <version>${maven-surefire-plugin.version}</version>
-                                <configuration>
-                                    <outputDirectory>${project.basedir}/target/site/testresults</outputDirectory>
-                                </configuration>
-                            </plugin>
-                            <plugin>
-                                <groupId>org.apache.maven.plugins</groupId>
-                                <artifactId>maven-plugin-plugin</artifactId>
-                                <version>${maven-plugin-plugin.version}</version>
-                            </plugin>
-                            <plugin>
-                                <groupId>org.apache.maven.plugins</groupId>
-                                <artifactId>maven-dependency-plugin</artifactId>
-                                <version>${maven-dependency-plugin.version}</version>
-                            </plugin>
-                            <plugin>
-                                <groupId>org.apache.maven.plugins</groupId>
-                                <artifactId>maven-javadoc-plugin</artifactId>
-                                <version>${maven-javadoc-plugin.version}</version>
-                                <configuration>
-                                    <aggregate>true</aggregate>
-                                </configuration>
-                            </plugin>
-                            <plugin>
-                                <groupId>org.apache.maven.plugins</groupId>
-                                <artifactId>maven-checkstyle-plugin</artifactId>
-                                <version>${maven-checkstyle-plugin.version}</version>
-                                <configuration>
-                                    <aggregate>true</aggregate>
-                                </configuration>
-                            </plugin>
-                            <plugin>
-                                <groupId>org.apache.maven.plugins</groupId>
-                                <artifactId>maven-project-info-reports-plugin</artifactId>
-                                <version>${maven-project-info-reports-plugin.version}</version>
-                                <configuration>
-                                    <aggregate>true</aggregate>
-                                </configuration>
-                            </plugin>
-                            <plugin>
-                                <groupId>org.apache.maven.plugins</groupId>
-                                <artifactId>maven-jxr-plugin</artifactId>
-                                <version>${maven-jxr-plugin.version}</version>
-                                <configuration>
-                                    <aggregate>true</aggregate>
-                                </configuration>
-                            </plugin>
-                            <plugin>
-                                <groupId>org.codehaus.mojo</groupId>
-                                <artifactId>cobertura-maven-plugin</artifactId>
-                                <version>${maven-cobertura-plugin.version}</version>
-                                <configuration>
-                                    <aggregate>true</aggregate>
-                                </configuration>
-                            </plugin>
-                            <plugin>
-                                <groupId>org.apache.maven.plugins</groupId>
-                                <artifactId>maven-pmd-plugin</artifactId>
-                                <version>${maven-pmd-plugin.version}</version>
-                                <configuration>
-                                    <rulesets>
-                                        <ruleset>/rulesets/basic.xml</ruleset>
-                                        <ruleset>/rulesets/controversial.xml</ruleset>
-                                    </rulesets>
-                                    <aggregate>true</aggregate>
-                                    <sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
-                                    <minimumTokens>100</minimumTokens>
-                                    <targetJdk>${jdk.version}</targetJdk>
-                                </configuration>
-                            </plugin>
-                            <plugin>
-                                <groupId>org.codehaus.mojo</groupId>
-                                <artifactId>findbugs-maven-plugin</artifactId>
-                                <version>${maven-findbugs-plugin.version}</version>
-                            </plugin>
-                            <plugin>
-                                <groupId>org.codehaus.mojo</groupId>
-                                <artifactId>taglist-maven-plugin</artifactId>
-                                <version>${maven-taglist-plugin.version}</version>
-                                <configuration>
-                                    <aggregate>true</aggregate>
-                                    <tagListOptions>
-                                        <tagClasses>
-                                            <tagClass>
-                                                <displayName>Todo Work</displayName>
-                                                <tags>
-                                                    <tag>
-                                                        <matchString>todo</matchString>
-                                                        <matchType>ignoreCase</matchType>
-                                                    </tag>
-                                                    <tag>
-                                                        <matchString>FIXME</matchString>
-                                                        <matchType>exact</matchType>
-                                                    </tag>
-                                                </tags>
-                                            </tagClass>
-                                        </tagClasses>
-                                    </tagListOptions>
-                                </configuration>
-                            </plugin>
-                        </reportPlugins>
                         <locales>en</locales>
                     </configuration>
                     <dependencies>
@@ -1090,9 +985,9 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>${maven-compiler-plugin.version}</version>
                     <configuration>
-                        <compilerArguments>
+                        <compilerArgs>
                             <Xlint/>
-                        </compilerArguments>
+                        </compilerArgs>
                         <source>${jdk.version}</source>
                         <target>${jdk.version}</target>
                     </configuration>
@@ -1200,9 +1095,9 @@
                             <scope>runtime</scope>
                         </dependency>
                         <dependency>
-                            <groupId>ch.qos.logback</groupId>
-                            <artifactId>logback-access</artifactId>
-                            <version>${logback.version}</version>
+                            <groupId>ch.qos.logback.access</groupId>
+                            <artifactId>common</artifactId>
+                            <version>${logback-access.version}</version>
                             <scope>runtime</scope>
                         </dependency>
                     </dependencies>
@@ -1248,9 +1143,9 @@
                             <scope>runtime</scope>
                         </dependency>
                         <dependency>
-                            <groupId>ch.qos.logback</groupId>
-                            <artifactId>logback-access</artifactId>
-                            <version>${logback.version}</version>
+                            <groupId>ch.qos.logback.access</groupId>
+                            <artifactId>common</artifactId>
+                            <version>${logback-access.version}</version>
                             <scope>runtime</scope>
                         </dependency>
                     </dependencies>
@@ -1321,9 +1216,9 @@
                             <scope>runtime</scope>
                         </dependency>
                         <dependency>
-                            <groupId>ch.qos.logback</groupId>
-                            <artifactId>logback-access</artifactId>
-                            <version>${logback.version}</version>
+                            <groupId>ch.qos.logback.access</groupId>
+                            <artifactId>common</artifactId>
+                            <version>${logback-access.version}</version>
                             <scope>runtime</scope>
                         </dependency>
                     </dependencies>
@@ -1359,7 +1254,7 @@
                         <execution>
                             <phase>generate-sources</phase>
                             <goals>
-                                <goal>sources</goal>
+                                <goal>resolve-sources</goal>
                             </goals>
                         </execution>
                     </executions>
@@ -1580,4 +1475,111 @@
             </plugin>
         </plugins>
     </build>
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>${maven-surefire-plugin.version}</version>
+                <configuration>
+                    <outputDirectory>${project.basedir}/target/site/testresults</outputDirectory>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-plugin-plugin</artifactId>
+                <version>${maven-plugin-plugin.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>${maven-dependency-plugin.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${maven-javadoc-plugin.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>${maven-checkstyle-plugin.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>${maven-project-info-reports-plugin.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jxr-plugin</artifactId>
+                <version>${maven-jxr-plugin.version}</version>
+            </plugin>
+            <!--            <plugin>-->
+            <!--                <groupId>org.codehaus.mojo</groupId>-->
+            <!--                <artifactId>cobertura-maven-plugin</artifactId>-->
+            <!--                <version>${maven-cobertura-plugin.version}</version>-->
+            <!--                <configuration>-->
+            <!--                    <aggregate>true</aggregate>-->
+            <!--                </configuration>-->
+            <!--            </plugin>-->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-pmd-plugin</artifactId>-->
+<!--                <version>${maven-pmd-plugin.version}</version>-->
+<!--                <configuration>-->
+<!--                    <reportSets>-->
+<!--                        <reportSet>&lt;!&ndash; by default, id = "default" &ndash;&gt;-->
+<!--                            <reports>&lt;!&ndash; select non-aggregate reports &ndash;&gt;-->
+<!--                                <report>pmd</report>-->
+<!--                                <report>cpd</report>-->
+<!--                            </reports>-->
+<!--                        </reportSet>-->
+<!--                        <reportSet>&lt;!&ndash; aggregate reportSet, to define in poms having modules &ndash;&gt;-->
+<!--                            <id>aggregate</id>-->
+<!--                            <inherited>false</inherited> &lt;!&ndash; don't run aggregate in child modules &ndash;&gt;-->
+<!--                            <reports>-->
+<!--                                <report>aggregate-pmd</report>-->
+<!--                                <report>aggregate-cpd</report>-->
+<!--                            </reports>-->
+<!--                        </reportSet>-->
+<!--                    </reportSets>-->
+<!--                    <aggregate>true</aggregate>-->
+<!--                    <sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>-->
+<!--                    <minimumTokens>100</minimumTokens>-->
+<!--                    <targetJdk>${jdk.version}</targetJdk>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+            <!--            <plugin>-->
+            <!--                <groupId>com.github.spotbugs</groupId>-->
+            <!--                <artifactId>spotbugs</artifactId>-->
+            <!--                <version>${maven-spotbugs-plugin.version}</version>-->
+            <!--            </plugin>-->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>taglist-maven-plugin</artifactId>
+                <version>${maven-taglist-plugin.version}</version>
+                <configuration>
+                    <aggregate>true</aggregate>
+                    <tagListOptions>
+                        <tagClasses>
+                            <tagClass>
+                                <displayName>Todo Work</displayName>
+                                <tags>
+                                    <tag>
+                                        <matchString>todo</matchString>
+                                        <matchType>ignoreCase</matchType>
+                                    </tag>
+                                    <tag>
+                                        <matchString>FIXME</matchString>
+                                        <matchType>exact</matchType>
+                                    </tag>
+                                </tags>
+                            </tagClass>
+                        </tagClasses>
+                    </tagListOptions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </reporting>
 </project>
