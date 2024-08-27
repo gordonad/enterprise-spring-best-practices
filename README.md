@@ -1,10 +1,6 @@
 Enterprise Spring Best Practices
 ================================
 
-Code companion site for the blog series "Enterprise Spring Best Practices"
-[http://gordondickens.com/wordpress/2012/07/03/enterprise-spring-best-practices-part-1-project-config/](http://gordondickens.com/wordpress/2012/07/03/enterprise-spring-best-practices-part-1-project-config)
-
-
 Modules
 -------
 - 01 Project Configuration
@@ -20,7 +16,7 @@ Modules
 
 Resources
 ----------
-- [http://static.springsource.org/spring/docs/3.1.x/spring-framework-reference/html](http://static.springsource.org/spring/docs/3.1.x/spring-framework-reference/html)
+- [https://docs.spring.io/spring-framework/reference/index.html](https://docs.spring.io/spring-framework/reference/index.html)
 - [http://maven.apache.org](http://maven.apache.org)
 - [http://www.slf4j.org](http://www.slf4j.org)
 - [http://logback.qos.ch/reasonsToSwitch.html](http://logback.qos.ch/reasonsToSwitch.html)
