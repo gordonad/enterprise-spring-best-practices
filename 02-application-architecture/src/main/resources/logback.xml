@@ -15,7 +15,7 @@
         </rollingPolicy>
 
         <encoder>
-            <pattern>%.-1level|%-40.40logger{0}|%msg%n</pattern>
+            <pattern>%level|%-40.40logger{0}|%msg%n</pattern>
         </encoder>
     </appender>
 

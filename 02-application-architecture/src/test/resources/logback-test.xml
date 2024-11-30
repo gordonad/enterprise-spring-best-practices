@@ -10,7 +10,7 @@
 
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>%.-1level|%-40.40logger{0}|%msg%n</pattern>
+            <pattern>%-6level%-60.60logger - %msg%n</pattern>
         </encoder>
     </appender>
 
